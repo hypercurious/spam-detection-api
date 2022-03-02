@@ -23,7 +23,6 @@ jobs:
         with: 
           host: ${{secrets.HOST}}
           username: ${{ secrets.USERNAME }}
-#           password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.KEY }}
           script: |
             rm -rf spam-detection-api
