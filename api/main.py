@@ -4,7 +4,7 @@ from fastapi import FastAPI
 #2 Create the app object
 app = FastAPI()
 
-with open("../model.pkl", "rb") as f:
+with open("../model/model.pkl", "rb") as f:
     model = pickle.load(f)
 
 def classify_message(model, message):
