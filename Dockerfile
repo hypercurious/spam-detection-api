@@ -2,12 +2,12 @@ FROM python:3.10
 
 RUN pip install fastapi uvicorn
 
-COPY ./app /app
+COPY ./api /api
 
 ENV PYTHONPATH=/api
-WORKDIR /app
+WORKDIR /api
 
 EXPOSE 8000
 
 ENTRYPOINT [ "uvicorn" ]
-CMD [ "main:app", "--reload" ]
+CMD [ "api.main:app", "--reload" ]
